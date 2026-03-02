@@ -1,0 +1,7 @@
+{
+  "name": "VizagYatra",
+  "description": "Your Gateway to Vizag's Best Stays & Rides. A high-performance, SEO-optimized tourism website for Visakhapatnam.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

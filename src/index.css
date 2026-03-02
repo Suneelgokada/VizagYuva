@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&family=Montserrat:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+
+  --color-ocean-blue: #0077be;
+  --color-warm-orange: #f28c28;
+  --color-sunshine-yellow: #ffcc33;
+  --color-nature-green: #2e8b57;
+  --color-light-gray: #f5f7fa;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@utility glass-morphism {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@utility sticky-nav {
+  @apply sticky top-0 z-50 glass-morphism shadow-sm transition-all duration-300;
+}
+
+@utility btn-primary {
+  @apply bg-ocean-blue hover:bg-ocean-blue/90 text-white px-6 py-3 rounded-xl font-semibold transition-all active:scale-95 shadow-md;
+}
+
+@utility btn-secondary {
+  @apply bg-warm-orange hover:bg-warm-orange/90 text-white px-6 py-3 rounded-xl font-semibold transition-all active:scale-95 shadow-md;
+}
+
+@utility card-hover {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
